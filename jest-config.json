@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "displayName": "balalaiqa-repos-test",
+      "globalSetup": "./environment/setup.js",
+      "globalTeardown": "./environment/teardown.js",
+      "testEnvironment": "./environment/playwright-environment.js",
+      "testRunner": "jest-circus/runner",
+      "testEnvironmentOptions": {
+        "tmsUrl" : "https://your.tms.url/",
+        "jiraUrl": "https://your.jira.url/"
+      },
+      "testMatch": [
+        "<rootDir>/tests/e2e/global/**/?(*.)+(spec|test).[jt]s?(x)",
+        "<rootDir>/tests/e2e/balalaiqa/**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "globals": {
+        "APP_URL": "https://github.com/balalaiQA"
+      }
+    },
+    {
+      "displayName": "microsoft-repos-test",
+      "globalSetup": "./environment/setup.js",
+      "globalTeardown": "./environment/teardown.js",
+      "testEnvironment": "./environment/playwright-environment.js",
+      "testRunner": "jest-circus/runner",
+      "testEnvironmentOptions": {
+        "tmsUrl" : "https://your.tms.url/",
+        "jiraUrl": "https://your.jira.url/"
+      },
+      "testMatch": [
+        "<rootDir>/tests/e2e/global/**/?(*.)+(spec|test).[jt]s?(x)",
+        "<rootDir>/tests/e2e/microsoft/**/?(*.)+(spec|test).[jt]s?(x)"
+      ],
+      "globals": {
+        "APP_URL": "https://github.com/microsoft"
+      }
+    }
+  ]
+}
